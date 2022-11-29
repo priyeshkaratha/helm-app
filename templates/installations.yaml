@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: aip-applications
+  namespace: poc
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: poc
+    name: dev-cluster
+  project: default
+  source:
+    path: kafka
+    repoURL: https://charts.bitnami.com/bitnami
+    targetRevision: 19.1.3
