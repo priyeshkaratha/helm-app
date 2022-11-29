@@ -9,7 +9,6 @@ spec:
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: poc
-    name: dev-cluster
   project: default
   source:
     path: kafka
